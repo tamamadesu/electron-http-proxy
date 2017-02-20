@@ -23,7 +23,7 @@ function watchProxy(self){
         };
 
         if(options.url.lastIndexOf('.css') !== -1){
-            let filePath = '/Users/tamamadesu/workspace/mono/code/MONO-backend/static_source/build/css/build_admin.css';
+            let filePath = '*.css';
             fs.stat(filePath, function(err, stat){
                 if(err){ throw err; }
                 if(!stat.isFile()){
