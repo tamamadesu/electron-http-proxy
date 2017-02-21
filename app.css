@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    font-size: 14px;
+    line-height: 1.7;
+    background-color: rgb(34, 34, 34);
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", sans-serif,'微软雅黑';
+}
+
+table{
+    width: 100%;
+    letter-spacing: 0;
+    background-color: transparent;
+}
+.list-panel th{
+    background-color: rgb(68, 68, 68);
+    height: 30px;
+}
+.list-panel th{
+    line-height: 1.4;
+    border-color: currentColor;
+    border-right: 1px solid rgba(0, 0, 0,.3);
+    border-bottom: 1px solid rgba(0, 0, 0,.3);
+    color: rgb(121, 247, 163);
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+    vertical-align: bottom;
+}
+.list-panel th,.list-panel td{
+    padding: 10px 10px 4px 8px;
+}
+.list-panel td{
+    color: rgb(204, 204, 204);
+    /* border-right: 1px solid rgba(255, 255, 255,.1); */
+    border-bottom: 1px solid rgba(255, 255, 255,.1);
+}
+
+.list-panel tbody tr:hover{
+    background-color: rgb(68, 68, 68);
+}

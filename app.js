@@ -1,20 +1,36 @@
 "use strict";
 
-let http      = require('http');
-let connect   = require('connect');
-let request   = require('request');
-let fs        = require('fs');
-let mime      = require('mime');
-let port      = 8000;
+let http    = require('http');
+let connect = require('connect');
+let request = require('request');
+let url     = require('url');
+let fs      = require('fs');
+let mime    = require('mime');
+let port    = 8000;
+
+function comboRequestList(req){
+
+    let parseUrl = url.parse(req.url);
+    console.log(req,parseUrl);
+
+    let list = {
+        name: parseUrl.pathname,
+        status: 200,
+        type: mime.lookup(req.url),
+        size: 0
+    };
+    return list;
+}
 
 function watchProxy(self){
 
     let app = connect();
 
-
     app.use(function(req,AppRes){
 
-        self.list.push(req.url);
+
+        self.list.push(comboRequestList(req));
+
         let options = {
             url: req.url,
             method: req.method,
@@ -57,6 +73,8 @@ function watchProxy(self){
         req.type = 'http';
         app(req, res);
     }).listen(port);
+
+    // server.timeout = 10000;
 
     console.log("listening on port "+ port);
 }
