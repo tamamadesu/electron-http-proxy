@@ -17,10 +17,10 @@ table{
 }
 .list-panel th{
     background-color: rgb(68, 68, 68);
-    height: 30px;
+    height: 40px;
+    line-height: 40px;
 }
 .list-panel th{
-    line-height: 1.4;
     border-color: currentColor;
     border-right: 1px solid rgba(0, 0, 0,.3);
     border-bottom: 1px solid rgba(0, 0, 0,.3);
@@ -30,15 +30,30 @@ table{
     text-align: left;
     vertical-align: bottom;
 }
-.list-panel th,.list-panel td{
-    padding: 10px 10px 4px 8px;
+.list-panel th{
+    padding-left: 8px;
 }
 .list-panel td{
     color: rgb(204, 204, 204);
-    /* border-right: 1px solid rgba(255, 255, 255,.1); */
+    padding: 8px;
     border-bottom: 1px solid rgba(255, 255, 255,.1);
+    border-right: 1px solid transparent; 
 }
 
 .list-panel tbody tr:hover{
     background-color: rgb(68, 68, 68);
 }
+.list-panel tbody tr:hover td{
+     border-right: 1px solid rgba(255, 255, 255,.1); 
+}
+.list-panel .url .name{
+    font-size: 16px;
+    font-weight: bold;
+}
+.list-panel .info{
+    color: #666;
+    width: 80%;
+    overflow: hidden;
+    
+}
+

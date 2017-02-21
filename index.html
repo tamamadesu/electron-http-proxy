@@ -11,7 +11,7 @@
             <table border="0" cellpadding="0" cellspacing="0">
                 <thead>
                     <tr>
-                        <th width="50%">Name</th>
+                        <th width="30%">Name</th>
                         <th>Status</th>
                         <th>Type</th>
                         <th>Size</th>
@@ -19,8 +19,15 @@
                 </thead>
                 <tbody v-show="list.length">
                     <tr v-for="l in list">
-                        <td>{{l.name}}</td>
-                        <td>{{l.status}}</td>
+                        <td class="url">
+                            <div class="name">{{l.name}}</div>
+                            <div class="info">{{l.url}}</div>
+                        </td>
+                        
+                        <td>
+                            <p>{{l.statusCode}}</p>
+                            <p class="info">{{l.statusMessage}}</p>
+                        </td>
                         <td>{{l.type}}</td>
                         <td>{{l.size}}</td>
                     </tr>
